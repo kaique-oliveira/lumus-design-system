@@ -6,8 +6,7 @@ export const Table = styled("div", {
   background: "$gray300",
   padding: "$4",
   borderRadius: "$sm",
-  boxShadow:
-    "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+  boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
 });
 
 export const Header = styled("div", {
