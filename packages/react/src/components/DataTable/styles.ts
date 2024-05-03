@@ -3,7 +3,7 @@ import { keyframes, styled } from "../../styles";
 
 export const Table = styled("div", {
   width: "max-content",
-  background: "$main200",
+  background: "$main300",
   padding: "$4",
   borderRadius: "$sm",
   boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
