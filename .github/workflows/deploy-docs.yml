@@ -1,8 +1,8 @@
-name: pages-build-deployment
+name: Deploy Docs
 
 on:
   push:
-    branches: -main
+    branches: -branches
 
 jobs:
   build-and-deploy:
