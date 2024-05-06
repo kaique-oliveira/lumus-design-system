@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from "@storybook/react";
-import { Box, Button, ButtonTypeProps } from "@lumus-ui/react";
+import { Box, Button, ButtonTypeProps, Icons } from "@lumus-ui/react";
 
 export default {
   title: "Form/Button",
@@ -21,6 +21,14 @@ export default {
       options: ["contained", "outlined", "text"],
       control: {
         type: "inline-radio",
+      },
+    },
+    icon: {
+      control: {
+        options: [Icons.add],
+        control: {
+          type: "text",
+        },
       },
     },
   },

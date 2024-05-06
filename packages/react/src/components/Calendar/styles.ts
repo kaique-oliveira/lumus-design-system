@@ -197,7 +197,7 @@ export const CalendarMonthsHeader = styled("div", {
   alignItems: "center",
   background: "$main100",
   borderRadius: "$px $px 0 0",
-  padding: "2px $2",
+  padding: "8px",
   boxSizing: "border-box",
 
   span: {
@@ -240,6 +240,7 @@ export const CalendarContainerYears = styled("div", {
 
   "& > :nth-child(1)": {
     width: "66.5%",
+    padding: "8px",
   },
 
   "& > :nth-child(2)": {
