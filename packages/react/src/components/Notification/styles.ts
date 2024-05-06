@@ -25,7 +25,7 @@ export const NotificationContainer = styled("div", {
 
         svg: {
           path: {
-            fill: "$main200",
+            stroke: "$main200",
           },
         },
       },
@@ -34,7 +34,7 @@ export const NotificationContainer = styled("div", {
 
         svg: {
           path: {
-            fill: "$success",
+            stroke: "$success",
           },
         },
       },
@@ -43,7 +43,7 @@ export const NotificationContainer = styled("div", {
 
         svg: {
           path: {
-            fill: "$warning",
+            stroke: "$warning",
           },
         },
       },
@@ -52,7 +52,7 @@ export const NotificationContainer = styled("div", {
 
         svg: {
           path: {
-            fill: "$error",
+            stroke: "$error",
           },
         },
       },

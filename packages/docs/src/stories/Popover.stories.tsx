@@ -21,7 +21,7 @@ export default {
     (Story) => {
       return (
         <Box style={{ width: "max-content", background: "transparent" }}>
-          <Popover title="Dimensão" icon="optionsSettingsLinear">
+          <Popover title="Dimensão" icon="setting_1">
             <>
               <Story
                 args={{

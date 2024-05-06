@@ -25,6 +25,9 @@ export * from "./components/ContextMenu";
 export * from "./components/Calendar";
 export * from "./components/DatePicker";
 export * from "./components/Spinner";
+export * from "./assets/icons";
+export * from "./assets/icons/colection-icons";
+export * from "./components/ButtonIcon";
 
 export * from "./utils/getPositionComponent";
 export * from "./utils/createMasked";

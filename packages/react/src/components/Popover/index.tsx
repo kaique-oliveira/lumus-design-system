@@ -105,7 +105,7 @@ export function Popover({
             <Text>{title}</Text>
             <Button
               variant="text"
-              icon="closeLinear"
+              icon="close"
               onClick={() => setMouseClick(false)}
             />
           </PopoverHeader>

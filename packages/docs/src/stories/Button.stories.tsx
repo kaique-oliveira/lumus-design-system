@@ -45,7 +45,7 @@ export const OnlyText: StoryObj<ButtonTypeProps> = {
 export const TextAndIcon: StoryObj<ButtonTypeProps> = {
   args: {
     label: "Enviar",
-    icon: "sendLinear",
+    icon: "add",
   },
   argTypes: {
     iconPosition: {
@@ -59,6 +59,6 @@ export const TextAndIcon: StoryObj<ButtonTypeProps> = {
 
 export const OnlyIcon: StoryObj<ButtonTypeProps> = {
   args: {
-    icon: "sendLinear",
+    icon: "add",
   },
 };

@@ -28,7 +28,7 @@ export function Tag({ option, icon, keyName, onSetChosenTag }: TagTypeProps) {
 
   return (
     <TagContainer onClick={focusTag}>
-      {!!IconComponent && <IconComponent />}
+      {/* {!!IconComponent && <IconComponent />} */}
       <Text sizeText="sm">{option.display}</Text>
       <input name={keyName} ref={refInput} type="radio" />
     </TagContainer>

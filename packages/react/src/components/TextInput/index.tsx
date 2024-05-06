@@ -81,7 +81,7 @@ export function TextInput({
           onChange={(e) => addMask(e)}
           {...props}
         />
-        {!!Icon && <Icon />}
+        {!!Icon && Icon}
       </TextInputContainer>
 
       {caption && (

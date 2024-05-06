@@ -18,7 +18,7 @@ export function SwitchTheme({ onChangeValue, ...props }: SwitchThemeProps) {
   return (
     <SwitchThemeContainer {...props} onCheckedChange={change}>
       <SwitchThemeThumb>
-        {states ? <Icons.moonBold /> : <Icons.sunBold />}
+        {/* {states ? <Icons.moon /> : <Icons.sun />} */}
       </SwitchThemeThumb>
     </SwitchThemeContainer>
   );

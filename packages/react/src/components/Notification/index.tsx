@@ -20,10 +20,10 @@ export const Notification = () => {
     >
       <Text sizeText={"sm"}>{notify.notification?.message}</Text>
 
-      {notify.notification?.type === "success" && <Icons.successBold />}
-      {notify.notification?.type === "error" && <Icons.errorBold />}
-      {notify.notification?.type === "warning" && <Icons.warningBold />}
-      {notify.notification?.type === "info" && <Icons.infoBold />}
+      {notify.notification?.type === "success" && Icons.success}
+      {notify.notification?.type === "error" && Icons.close_circle}
+      {notify.notification?.type === "warning" && Icons.warning}
+      {notify.notification?.type === "info" && Icons.info_circle}
     </NotificationContainer>
   );
 };

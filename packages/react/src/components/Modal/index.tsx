@@ -69,7 +69,7 @@ export function Modal({
               <Text>{title}</Text>
               <Button
                 variant="text"
-                icon="closeLinear"
+                // icon="close"
                 onClick={() => onHideModal(false)}
               />
             </ModalHeader>

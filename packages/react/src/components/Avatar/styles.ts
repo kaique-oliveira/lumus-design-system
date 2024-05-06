@@ -8,7 +8,7 @@ export const AvatarContainer = styled(Avatar.Root, {
   height: "var(--height)",
 
   overflow: "hidden",
-  border: "3px solid $main200",
+  border: "4px solid $main200",
   padding: "2px",
 });
 
@@ -34,7 +34,7 @@ export const AvatarFallback = styled(Avatar.Fallback, {
     height: "80%",
 
     path: {
-      fill: "$main200",
+      stroke: "$main200",
     },
   },
 });

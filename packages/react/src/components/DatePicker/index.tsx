@@ -73,9 +73,9 @@ export function DatePicker({
       <DatePickerInput
         onActionClick={() => setOpenCalendar(!openCalendar)}
         autoFocus={openCalendar}
+        icon="calendar"
         readOnly
         keyId={keyId}
-        icon="calendarLinear"
         value={dateSelected.toLocaleDateString()}
         onChangeValue={() => {}}
         label={label}

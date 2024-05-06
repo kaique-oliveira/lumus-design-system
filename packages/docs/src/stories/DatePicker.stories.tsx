@@ -17,6 +17,7 @@ export default {
             args={{
               keyId: "nascimento",
               label: "Data de nascimento",
+
               onSelectedDate(date) {
                 setData(date);
               },

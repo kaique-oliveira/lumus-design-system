@@ -12,9 +12,7 @@ export function Avatar({
   return (
     <AvatarContainer css={{ "--width": width, "--height": height }}>
       <AvatarImage {...rest} />
-      <AvatarFallback>
-        <Icons.profileBold />
-      </AvatarFallback>
+      <AvatarFallback>{Icons.profile_circle}</AvatarFallback>
     </AvatarContainer>
   );
 }

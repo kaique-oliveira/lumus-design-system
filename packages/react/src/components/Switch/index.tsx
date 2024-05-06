@@ -15,7 +15,7 @@ export function Switch({ keyId, label = "", icon, ...props }: SwitchTypeProps) {
   return (
     <SwitchWrapper>
       <SwitchContainer id={keyId} {...props}>
-        <SwitchThumb>{!!IconComponent && <IconComponent />}</SwitchThumb>
+        <SwitchThumb>{!!IconComponent && IconComponent}</SwitchThumb>
       </SwitchContainer>
 
       <Label sizeText={"sm"} htmlFor={keyId}>

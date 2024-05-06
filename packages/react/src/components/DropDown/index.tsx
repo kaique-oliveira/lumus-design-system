@@ -82,7 +82,7 @@ export function DropDown({
         <Text sizeText="xs">
           {!!optionChoose ? optionChoose.display : placeholder}
         </Text>
-        <Icons.arrowDownLinear />
+        {Icons.arrow_down}
       </DropDownContainer>
 
       {toggle && (

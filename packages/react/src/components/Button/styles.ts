@@ -87,7 +87,6 @@ export const ButtonContainer = styled("button", {
         backgroundColor: "transparent",
         border: "1.5px solid transparent",
 
-        padding: "2px",
         height: "max-content",
 
         span: {
@@ -130,9 +129,8 @@ export const ButtonContainer = styled("button", {
 
   height: "38px",
   maxHeight: "38px",
-  // minWidth: "38px",
 
-  padding: "0 9px",
+  padding: "0 10px",
 
   borderRadius: "$xs",
   cursor: "pointer",

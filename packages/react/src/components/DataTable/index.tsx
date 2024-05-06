@@ -134,7 +134,7 @@ export function DataTable<T>({
       <Header>
         <Text>Usuários</Text>
         <TextInput
-          icon="searchLinear"
+          // icon="search"
           placeholder={searchPlaceholder}
           value={searchTable}
           keyId={"search-table"}
@@ -190,14 +190,14 @@ export function DataTable<T>({
 
         <Button
           variant="text"
-          icon="arrowLeftLinear"
+          icon="arrow_left"
           disabled={currentPage === 1 && true}
           onClick={() => handleNextPage(currentPage - 1)}
         />
 
         <Button
           variant="text"
-          icon="arrowRightLinear"
+          icon="arrow_right"
           disabled={currentPage === totalPages && true}
           onClick={() => handleNextPage(currentPage + 1)}
         />

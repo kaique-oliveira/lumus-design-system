@@ -123,7 +123,7 @@ export const Calendar = ({ onDateSelected }: CalendarTypeProps) => {
         <div>
           <Button
             variant="text"
-            icon="arrowLeftLinear"
+            icon="arrow_left"
             onClick={() =>
               navigateCalendar(
                 new Date(
@@ -137,7 +137,7 @@ export const Calendar = ({ onDateSelected }: CalendarTypeProps) => {
 
           <Button
             variant="text"
-            icon="arrowRightLinear"
+            icon="arrow_right"
             onClick={() =>
               navigateCalendar(
                 new Date(
@@ -167,7 +167,7 @@ export const Calendar = ({ onDateSelected }: CalendarTypeProps) => {
             <span>Selecionar mês</span>
             <Button
               variant="text"
-              icon="closeLinear"
+              icon="close"
               onClick={() => setOpenChangeMonth(false)}
             />
           </CalendarMonthsHeader>
@@ -195,7 +195,7 @@ export const Calendar = ({ onDateSelected }: CalendarTypeProps) => {
             <span>Selecionar ano</span>
             <Button
               variant="text"
-              icon="closeLinear"
+              icon="close"
               onClick={() => setOpenChangeYear(false)}
             />
           </CalendarMonthsHeader>
