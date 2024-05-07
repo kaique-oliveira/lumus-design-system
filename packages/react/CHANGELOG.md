@@ -1,7 +1,13 @@
 # @lumus-ui/react
 
-## 1.1.0
+## 1.0.1
 
-### Minor Changes
+### Patch Changes
 
-- Add components
+- add readme
+
+## 1.0.2
+
+### Patch Changes
+
+- add readme
