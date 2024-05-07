@@ -35,4 +35,8 @@
 - [X] useNotification
 - [X] useTimeOutEffect
 
+# Utils
+
+- [X] createMasked
+- [X] getPositionComponent
 
