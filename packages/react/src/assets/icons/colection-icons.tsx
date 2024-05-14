@@ -8605,6 +8605,91 @@ export const colectionIcons: Categories = {
       },
     ],
   },
+  security: {
+    name: "",
+    icons: [
+      {
+        name: "eye",
+        svg: (
+          <svg
+            width="19"
+            height="18"
+            viewBox="0 0 19 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.1849 8.99994C12.1849 10.4849 10.9849 11.6849 9.49994 11.6849C8.01494 11.6849 6.81494 10.4849 6.81494 8.99994C6.81494 7.51494 8.01494 6.31494 9.49994 6.31494C10.9849 6.31494 12.1849 7.51494 12.1849 8.99994Z"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M9.49988 15.2025C12.1474 15.2025 14.6149 13.6425 16.3324 10.9425C17.0074 9.88504 17.0074 8.10754 16.3324 7.05004C14.6149 4.35004 12.1474 2.79004 9.49988 2.79004C6.85238 2.79004 4.38488 4.35004 2.66738 7.05004C1.99238 8.10754 1.99238 9.88504 2.66738 10.9425C4.38488 13.6425 6.85238 15.2025 9.49988 15.2025Z"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        ),
+      },
+      {
+        name: "eyeSlash",
+        svg: (
+          <svg
+            width="19"
+            height="18"
+            viewBox="0 0 19 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.3974 7.10244L7.60244 10.8974C7.11494 10.4099 6.81494 9.74244 6.81494 8.99994C6.81494 7.51494 8.01494 6.31494 9.49994 6.31494C10.2424 6.31494 10.9099 6.61494 11.3974 7.10244Z"
+              stroke="#292D32"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M13.8649 4.32736C12.5524 3.33736 11.0524 2.79736 9.49988 2.79736C6.85238 2.79736 4.38488 4.35736 2.66738 7.05736C1.99238 8.11486 1.99238 9.89236 2.66738 10.9499C3.25988 11.8799 3.94988 12.6824 4.69988 13.3274"
+              stroke="#292D32"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M6.81494 14.6473C7.66994 15.0073 8.57744 15.2023 9.49994 15.2023C12.1474 15.2023 14.6149 13.6423 16.3324 10.9423C17.0074 9.88477 17.0074 8.10727 16.3324 7.04977C16.0849 6.65977 15.8149 6.29227 15.5374 5.94727"
+              stroke="#292D32"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M12.1326 9.5249C11.9376 10.5824 11.0751 11.4449 10.0176 11.6399"
+              stroke="#292D32"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M7.6025 10.8975L2 16.5"
+              stroke="#292D32"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M17 1.5L11.3975 7.1025"
+              stroke="#292D32"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        ),
+      },
+    ],
+  },
   time: {
     name: "Times",
     icons: [
