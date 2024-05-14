@@ -34,3 +34,4 @@ export * from "./hooks/useNotification";
 export * from "./hooks/useDialog";
 export * from "./hooks/useContextMenu";
 export * from "./hooks/useTimeoutEffect";
+export * from "./styles";
