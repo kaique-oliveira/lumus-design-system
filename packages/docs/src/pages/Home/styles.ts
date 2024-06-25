@@ -5,9 +5,10 @@ export const Container = styled("div", {
   height: "100%",
 
   display: "flex",
-  justifyContent: "flex-start",
-  alignItems: "flex-start",
+  justifyContent: "center",
+  alignItems: "center",
   flexDirection: "column",
+
   gap: "$8",
 
   paddingLeft: "32px",

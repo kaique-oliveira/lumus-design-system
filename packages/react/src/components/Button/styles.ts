@@ -127,6 +127,7 @@ export const ButtonContainer = styled("button", {
     },
   },
 
+  transition: "all .2s",
   height: "38px",
   maxHeight: "38px",
 

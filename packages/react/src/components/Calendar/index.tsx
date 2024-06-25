@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import {
   CalendarContainer,
   CalendarContainerMonths,
@@ -8,33 +8,33 @@ import {
   CalendarGridDays,
   CalendarHeader,
   CalendarMonthsHeader,
-} from "./styles";
-import { Button } from "../Button";
-import { YearList } from "./yearList";
+} from './styles';
+import { Button } from '../Button';
+import { YearList } from './yearList';
 
 export const WeekDays = {
-  domingo: "Domingo",
-  segunda: "Segunda-feira",
-  terca: "Terça-feira",
-  quarta: "Quarta-feira",
-  quinta: "Quinta-feira",
-  sexta: "Sexta-feira",
-  sabado: "Sábado",
+  domingo: 'Domingo',
+  segunda: 'Segunda-feira',
+  terca: 'Terça-feira',
+  quarta: 'Quarta-feira',
+  quinta: 'Quinta-feira',
+  sexta: 'Sexta-feira',
+  sabado: 'Sábado',
 } as const;
 
 export const Months = {
-  1: "Janeiro",
-  2: "Fevereiro",
-  3: "Março",
-  4: "Abril",
-  5: "Maio",
-  6: "Junho",
-  7: "Julho",
-  8: "Agosto",
-  9: "Setembro",
-  10: "Outubro",
-  11: "Novembro",
-  12: "Dezembro",
+  1: 'Janeiro',
+  2: 'Fevereiro',
+  3: 'Março',
+  4: 'Abril',
+  5: 'Maio',
+  6: 'Junho',
+  7: 'Julho',
+  8: 'Agosto',
+  9: 'Setembro',
+  10: 'Outubro',
+  11: 'Novembro',
+  12: 'Dezembro',
 } as const;
 
 export interface CalendarTypeProps {
@@ -72,7 +72,7 @@ export const Calendar = ({ onDateSelected }: CalendarTypeProps) => {
 
       for (let j = 0; j < 7; j++) {
         if (i === 0 && j < firstDayOfMonth) {
-          week.push(<CalendarDay key={j + "column"}></CalendarDay>);
+          week.push(<CalendarDay key={j + 'column'}></CalendarDay>);
         } else if (dayCounter <= daysInCurrentMonth) {
           const currentDate = new Date(year, month, dayCounter);
           const now = new Date();
@@ -81,10 +81,10 @@ export const Calendar = ({ onDateSelected }: CalendarTypeProps) => {
             <CalendarDay
               state={
                 currentDate.toDateString() === selectedDate.toDateString()
-                  ? "selected"
+                  ? 'selected'
                   : currentDate.toDateString() === now.toDateString()
-                    ? "current"
-                    : "deselected"
+                    ? 'current'
+                    : 'deselected'
               }
               key={dayCounter}
               onClick={() => handleDateClick(currentDate)}
@@ -94,11 +94,11 @@ export const Calendar = ({ onDateSelected }: CalendarTypeProps) => {
           );
           dayCounter++;
         } else {
-          week.push(<CalendarDay key={j + "day"}></CalendarDay>);
+          week.push(<CalendarDay key={j + 'day'}></CalendarDay>);
         }
       }
 
-      calendar.push(<CalendarDay key={i + "week"}>{week}</CalendarDay>);
+      calendar.push(<CalendarDay key={i + 'week'}>{week}</CalendarDay>);
     }
 
     return calendar;
@@ -113,7 +113,7 @@ export const Calendar = ({ onDateSelected }: CalendarTypeProps) => {
       <CalendarHeader>
         <div>
           <span onClick={() => setOpenChangeMonth(!openChangeMonth)}>
-            {dateNavigate.toLocaleString("default", { month: "long" })}{" "}
+            {dateNavigate.toLocaleString('default', { month: 'long' })}{' '}
           </span>
           <span onClick={() => setOpenChangeYear(!openChangeYear)}>
             {dateNavigate.getFullYear()}

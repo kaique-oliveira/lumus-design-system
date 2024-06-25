@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { Ref, forwardRef, useRef } from "react";
 import { generateMask, GenerateMaskProps } from "../../utils/createMasked";
 import {
   Caption,
@@ -18,37 +18,31 @@ export interface TextAreaProps
   onChangeValue(value: string): void;
 }
 
-export function TextArea({
-  keyId,
-  label,
-  caption,
-  onChangeValue,
-  ...props
-}: TextAreaProps) {
-  const refInput = useRef<HTMLTextAreaElement>(null);
-
-  return (
-    <TextAreaWrapper>
-      <Label htmlFor={keyId}>{label}</Label>
-      <TextAreaContainer>
-        <Area id={keyId} ref={refInput} {...props} />
-      </TextAreaContainer>
-      {caption && (
-        <Caption
-          css={{
-            "--state":
-              caption.state === "info"
-                ? colors.text100
-                : caption.state === "success"
-                  ? colors.success
-                  : caption.state === "warning"
-                    ? colors.warning
-                    : colors.error,
-          }}
-        >
-          {caption.value}
-        </Caption>
-      )}
-    </TextAreaWrapper>
-  );
-}
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
+  function TextArea({ keyId, label, caption, onChangeValue, ...props }, ref) {
+    return (
+      <TextAreaWrapper>
+        <Label htmlFor={keyId}>{label}</Label>
+        <TextAreaContainer>
+          <Area ref={ref} id={keyId} {...props} />
+        </TextAreaContainer>
+        {caption && (
+          <Caption
+            css={{
+              "--state":
+                caption.state === "info"
+                  ? colors.text100
+                  : caption.state === "success"
+                    ? colors.success
+                    : caption.state === "warning"
+                      ? colors.warning
+                      : colors.error,
+            }}
+          >
+            {caption.value}
+          </Caption>
+        )}
+      </TextAreaWrapper>
+    );
+  }
+);

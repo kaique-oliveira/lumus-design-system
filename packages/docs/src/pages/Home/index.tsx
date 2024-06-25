@@ -1,10 +1,10 @@
-import { Container } from "./styles";
-import { Button } from "@lumus-ui/react";
+import { Container } from './styles';
+import { Calendar } from '@lumus-ui/react';
 
 export function Home() {
   return (
     <Container>
-      <Button icon={"card_tick"} />
+      <Calendar onDateSelected={() => {}} />
     </Container>
   );
 }

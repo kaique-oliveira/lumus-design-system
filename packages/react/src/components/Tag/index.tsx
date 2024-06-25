@@ -1,7 +1,7 @@
-import { TagContainer } from "./styles";
-import { Text } from "../Text";
-import { Icons, IconsProps } from "../../assets/icons";
-import { useRef, useState } from "react";
+import { TagContainer } from './styles';
+import { Text } from '../Text';
+import { Icons, IconsProps } from '../../assets/icons';
+import { useEffect, useRef, useState } from 'react';
 
 export type OptionTypeTag = {
   value: string | number;
@@ -12,10 +12,19 @@ export interface TagTypeProps {
   keyName: string;
   option: OptionTypeTag;
   icon?: IconsProps;
+  iconPosition?: 'left' | 'right';
+  value?: string;
   onSetChosenTag?(option: OptionTypeTag): void;
 }
 
-export function Tag({ option, icon, keyName, onSetChosenTag }: TagTypeProps) {
+export function Tag({
+  option,
+  value,
+  icon,
+  iconPosition = 'right',
+  keyName,
+  onSetChosenTag,
+}: TagTypeProps) {
   const refInput = useRef<HTMLInputElement>(null);
   const IconComponent = !!icon && Icons[icon];
 
@@ -26,9 +35,15 @@ export function Tag({ option, icon, keyName, onSetChosenTag }: TagTypeProps) {
     }
   }
 
+  useEffect(() => {
+    if (value && value === option.value) {
+      focusTag();
+    }
+  }, [value]);
+
   return (
-    <TagContainer onClick={focusTag}>
-      {/* {!!IconComponent && <IconComponent />} */}
+    <TagContainer onClick={focusTag} iconPosition={iconPosition}>
+      {!!IconComponent && IconComponent}
       <Text sizeText="sm">{option.display}</Text>
       <input name={keyName} ref={refInput} type="radio" />
     </TagContainer>

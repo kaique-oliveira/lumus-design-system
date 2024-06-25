@@ -1,6 +1,7 @@
 import { styled } from "../../styles";
 
 export const TextAreaWrapper = styled("div", {
+  width: "100%",
   height: "max-content",
   display: "flex",
   justifyContent: "flex-start",
