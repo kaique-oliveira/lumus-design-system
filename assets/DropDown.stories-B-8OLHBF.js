@@ -1,0 +1,5 @@
+import{j as r}from"./jsx-runtime-CzbbXsaA.js";import{f,B as y,T as x}from"./index-DjAqyo17.js";import{r as t}from"./index-DLjnpb--.js";import"./index-Bw75J0Vo.js";import"./index-B3BJIMJD.js";const j={title:"Form/DropDown",component:f,args:{disabled:!1},argTypes:{disabled:{control:{type:"boolean"}}},decorators:[p=>{const o=[{value:1,display:"Uva"},{value:2,display:"Abacate"},{value:3,display:"Banana"},{value:4,display:"Maçã"},{value:5,display:"Pera"},{value:6,display:"Melância"}],[a,u]=t.useState(""),[s,c]=t.useState(null);return t.useEffect(()=>{if(a){const i=o.find(m=>Number(m.value)==Number(a));c(i)}},[a]),r.jsxs(y,{style:{width:"300px",background:"transparent"},children:[r.jsx(p,{args:{placeholder:"Selecione uma fruta",onSelectValue:u,options:o}}),r.jsx(x,{children:s==null?void 0:s.display})]})}]},e={args:{keyId:"fruts"}};var l,n,d;e.parameters={...e.parameters,docs:{...(l=e.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    keyId: "fruts"
+  }
+}`,...(d=(n=e.parameters)==null?void 0:n.docs)==null?void 0:d.source}}};const h=["Default"];export{e as Default,h as __namedExportsOrder,j as default};

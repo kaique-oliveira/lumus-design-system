@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime-CzbbXsaA.js";import{N as t,D as i}from"./index-DjAqyo17.js";import"./index-DLjnpb--.js";import"./index-Bw75J0Vo.js";import"./index-B3BJIMJD.js";const n={parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}}}},e=r=>o.jsx(t,{children:o.jsx(i,{children:o.jsx(r,{})})}),p=[e];export{p as decorators,n as default};
