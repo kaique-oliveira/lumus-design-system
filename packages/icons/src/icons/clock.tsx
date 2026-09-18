@@ -1,0 +1,11 @@
+import { createIcon } from '../create-icon'
+
+export const Clock = createIcon({
+  name: 'clock',
+  viewBox: '0 0 19 18',
+  children: (
+    <>
+      <path d="M17 9C17 13.14 13.64 16.5 9.5 16.5C5.36 16.5 2 13.14 2 9C2 4.86 5.36 1.5 9.5 1.5C13.64 1.5 17 4.86 17 9Z" /><path d="M12.2827 11.3848L9.95766 9.99732C9.55266 9.75732 9.22266 9.17982 9.22266 8.70732V5.63232" />
+    </>
+  ),
+})

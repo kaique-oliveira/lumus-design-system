@@ -1,17 +1,14 @@
 {
-    "$schema": "https://turborepo.org/schema.json",
-    "pipeline": {
-        "dev": {
-            "cache": false
-        },
-        "build": {
-            "outputs": [
-                "dist/**",
-                "storybook-static/**"
-            ],
-            "dependsOn": [
-                "^build"
-            ]
-        }
-    }
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "stream",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "storybook-static/**"]
+    },
+    "dev": { "cache": false, "persistent": true },
+    "lint": { "dependsOn": ["^build"] },
+    "typecheck": { "dependsOn": ["^build"] },
+    "test": { "dependsOn": ["^build"] }
+  }
 }

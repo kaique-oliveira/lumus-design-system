@@ -1,0 +1,11 @@
+import { createIcon } from '../create-icon'
+
+export const ArrowPin = createIcon({
+  name: 'arrow_pin',
+  viewBox: '0 0 19 18',
+  children: (
+    <>
+      <path d="M13.6324 6.13477H8.95994H4.75244C4.03244 6.13477 3.67244 7.00477 4.18244 7.51477L8.06744 11.3998C8.68994 12.0223 9.70244 12.0223 10.3249 11.3998L11.8024 9.92227L14.2099 7.51477C14.7124 7.00477 14.3524 6.13477 13.6324 6.13477Z" fill="currentColor" />
+    </>
+  ),
+})

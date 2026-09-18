@@ -1,20 +1,44 @@
 {
   "name": "@lumus-ui/tokens",
-  "version": "1.1.1",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
-  },
-  "keywords": [],
-  "author": "Kaique Oliveira",
+  "version": "2.0.0",
+  "description": "Tokens de design do Lumus em TypeScript e em CSS para Tailwind v4",
   "license": "MIT",
-  "description": "",
+  "author": "Kaique Oliveira",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./theme.css": "./dist/theme.css"
+  },
+  "scripts": {
+    "build": "tsdown && tsx scripts/build-theme.ts",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
   "devDependencies": {
-    "@lumus-ui/ts-config": "*",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "@types/node": "26.6.1",
+    "tsdown": "0.23.0",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "vitest": "5.0.1"
   }
 }
