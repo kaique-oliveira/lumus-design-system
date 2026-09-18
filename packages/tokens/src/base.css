@@ -1,0 +1,73 @@
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  [data-theme='dark'] {
+    color-scheme: dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      color-scheme: dark;
+    }
+  }
+}
+
+/* Feedback de toque no padrão iOS: encolhe rápido ao pressionar e volta com mola. */
+@utility press {
+  transition-property: transform, box-shadow, background-color, border-color, color, opacity;
+  transition-duration: var(--lumus-duration-spring);
+  transition-timing-function: var(--ease-spring);
+
+  &:active:not(:disabled):not([data-disabled]) {
+    transform: scale(0.96);
+    transition-duration: var(--lumus-duration-instant);
+    transition-timing-function: var(--ease-out);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:active:not(:disabled):not([data-disabled]) {
+      transform: none;
+    }
+  }
+}
+
+@utility press-soft {
+  transition-property: opacity, background-color, border-color, color;
+  transition-duration: var(--lumus-duration-fast);
+  transition-timing-function: var(--ease-out);
+
+  &:active:not(:disabled):not([data-disabled]) {
+    opacity: 0.85;
+  }
+}
+
+@utility scrollbar-soft {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lumus-color-border-strong) transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--lumus-color-border-strong);
+    border-radius: 9999px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

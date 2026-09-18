@@ -1,0 +1,169 @@
+/*
+ * Entrada e saída compostas por utilitários, no espírito do tailwindcss-animate.
+ * `animate-in` mais `fade-in zoom-in-95 slide-in-from-bottom-2` monta a animação
+ * a partir de variáveis. Duração e curva vêm de `duration-*` e `ease-*`.
+ */
+
+@keyframes lumus-enter {
+  from {
+    opacity: var(--lumus-enter-opacity, 1);
+    transform: translate3d(var(--lumus-enter-translate-x, 0), var(--lumus-enter-translate-y, 0), 0)
+      scale3d(var(--lumus-enter-scale, 1), var(--lumus-enter-scale, 1), var(--lumus-enter-scale, 1))
+      rotate(var(--lumus-enter-rotate, 0));
+  }
+}
+
+@keyframes lumus-exit {
+  to {
+    opacity: var(--lumus-exit-opacity, 1);
+    transform: translate3d(var(--lumus-exit-translate-x, 0), var(--lumus-exit-translate-y, 0), 0)
+      scale3d(var(--lumus-exit-scale, 1), var(--lumus-exit-scale, 1), var(--lumus-exit-scale, 1))
+      rotate(var(--lumus-exit-rotate, 0));
+  }
+}
+
+@keyframes lumus-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lumus-pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes lumus-collapse-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height, auto);
+  }
+}
+
+@keyframes lumus-collapse-up {
+  from {
+    height: var(--radix-collapsible-content-height, auto);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@utility animate-in {
+  animation-name: lumus-enter;
+  animation-duration: var(--tw-duration, var(--lumus-duration-base));
+  animation-timing-function: var(--tw-ease, var(--ease-out));
+  animation-fill-mode: both;
+  --lumus-enter-opacity: initial;
+  --lumus-enter-scale: initial;
+  --lumus-enter-translate-x: initial;
+  --lumus-enter-translate-y: initial;
+  --lumus-enter-rotate: initial;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 1ms;
+  }
+}
+
+@utility animate-out {
+  animation-name: lumus-exit;
+  animation-duration: var(--tw-duration, var(--lumus-duration-fast));
+  animation-timing-function: var(--tw-ease, var(--ease-in));
+  animation-fill-mode: both;
+  --lumus-exit-opacity: initial;
+  --lumus-exit-scale: initial;
+  --lumus-exit-translate-x: initial;
+  --lumus-exit-translate-y: initial;
+  --lumus-exit-rotate: initial;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 1ms;
+  }
+}
+
+@utility fade-in {
+  --lumus-enter-opacity: 0;
+}
+@utility fade-in-* {
+  --lumus-enter-opacity: calc(--value(integer) / 100);
+}
+@utility fade-out {
+  --lumus-exit-opacity: 0;
+}
+@utility fade-out-* {
+  --lumus-exit-opacity: calc(--value(integer) / 100);
+}
+
+@utility zoom-in {
+  --lumus-enter-scale: 0;
+}
+@utility zoom-in-* {
+  --lumus-enter-scale: calc(--value(integer) / 100);
+}
+@utility zoom-out {
+  --lumus-exit-scale: 0;
+}
+@utility zoom-out-* {
+  --lumus-exit-scale: calc(--value(integer) / 100);
+}
+
+@utility slide-in-from-top-* {
+  --lumus-enter-translate-y: calc(var(--spacing) * --value(integer) * -1);
+  --lumus-enter-translate-y: calc(--value([percentage]) * -1);
+}
+@utility slide-in-from-top-full {
+  --lumus-enter-translate-y: -100%;
+}
+@utility slide-in-from-bottom-* {
+  --lumus-enter-translate-y: calc(var(--spacing) * --value(integer));
+  --lumus-enter-translate-y: --value([percentage]);
+}
+@utility slide-in-from-bottom-full {
+  --lumus-enter-translate-y: 100%;
+}
+@utility slide-in-from-left-* {
+  --lumus-enter-translate-x: calc(var(--spacing) * --value(integer) * -1);
+  --lumus-enter-translate-x: calc(--value([percentage]) * -1);
+}
+@utility slide-in-from-left-full {
+  --lumus-enter-translate-x: -100%;
+}
+@utility slide-in-from-right-* {
+  --lumus-enter-translate-x: calc(var(--spacing) * --value(integer));
+  --lumus-enter-translate-x: --value([percentage]);
+}
+@utility slide-in-from-right-full {
+  --lumus-enter-translate-x: 100%;
+}
+
+@utility slide-out-to-top-* {
+  --lumus-exit-translate-y: calc(var(--spacing) * --value(integer) * -1);
+  --lumus-exit-translate-y: calc(--value([percentage]) * -1);
+}
+@utility slide-out-to-top-full {
+  --lumus-exit-translate-y: -100%;
+}
+@utility slide-out-to-bottom-* {
+  --lumus-exit-translate-y: calc(var(--spacing) * --value(integer));
+  --lumus-exit-translate-y: --value([percentage]);
+}
+@utility slide-out-to-bottom-full {
+  --lumus-exit-translate-y: 100%;
+}
+@utility slide-out-to-left-* {
+  --lumus-exit-translate-x: calc(var(--spacing) * --value(integer) * -1);
+  --lumus-exit-translate-x: calc(--value([percentage]) * -1);
+}
+@utility slide-out-to-left-full {
+  --lumus-exit-translate-x: -100%;
+}
+@utility slide-out-to-right-* {
+  --lumus-exit-translate-x: calc(var(--spacing) * --value(integer));
+  --lumus-exit-translate-x: --value([percentage]);
+}
+@utility slide-out-to-right-full {
+  --lumus-exit-translate-x: 100%;
+}

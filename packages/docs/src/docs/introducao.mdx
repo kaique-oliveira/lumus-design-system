@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Introdução" />
+
+# Lumus
+
+Biblioteca de componentes React do Kaique, estilizada com Tailwind v4.
+
+Visual no padrão iOS: uma cor de fundo, superfícies brancas flutuando, tudo em pílula ou com canto de 24px, sombra discreta em camadas, mola nas transições.
+
+## Instalar
+
+```bash
+pnpm add @lumus-ui/react @lumus-ui/icons
+```
+
+No CSS do projeto:
+
+```css
+@import 'tailwindcss';
+@import '@lumus-ui/react/theme.css';
+```
+
+Monte uma vez na raiz, para notificação e confirmação funcionarem de qualquer lugar:
+
+```tsx
+import { Toaster, Confirmer } from '@lumus-ui/react'
+
+export function App() {
+  return (
+    <>
+      <Rotas />
+      <Toaster />
+      <Confirmer />
+    </>
+  )
+}
+```
+
+## Ícones
+
+Toda prop `icon` aceita três formas:
+
+```tsx
+import { Home } from 'lucide-react'
+import { Add } from '@lumus-ui/icons'
+
+<Button leftIcon={<Home />}>elemento pronto, de qualquer lib</Button>
+<Button leftIcon={Add}>o componente em si</Button>
+<Button leftIcon="home">nome registrado</Button>
+```
+
+Para o nome funcionar, registre uma vez:
+
+```tsx
+import { registerIcons } from '@lumus-ui/react'
+import { Home, Search } from 'lucide-react'
+
+registerIcons({ home: Home, search: Search })
+
+declare module '@lumus-ui/react' {
+  interface IconRegistry {
+    home: true
+    search: true
+  }
+}
+```
+
+## Tema escuro
+
+`ThemeSwitch` liga e desliga. A escolha fica salva no navegador e vira `data-theme` no `<html>`. Sem o componente, o tema segue o sistema.

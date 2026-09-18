@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import '@lumus-ui/react/theme.css';
+
+body {
+  margin: 0;
+}

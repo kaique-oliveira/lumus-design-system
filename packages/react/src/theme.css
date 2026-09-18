@@ -1,0 +1,7 @@
+/*
+ * Ponto de entrada do CSS para quem usa a lib.
+ * No CSS do projeto: @import "tailwindcss"; @import "@lumus-ui/react/theme.css";
+ * O @source abaixo faz o Tailwind do projeto enxergar as classes dos componentes.
+ */
+@import '@lumus-ui/tokens/theme.css';
+@source './index.mjs';

@@ -1,4 +1,5 @@
 {
-  "extends": "@lumus-ui/ts-config/base.json",
-  "include": ["src"],
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": { "rootDir": ".", "noEmit": true, "types": ["node"] },
+  "include": ["src", "scripts"]
 }

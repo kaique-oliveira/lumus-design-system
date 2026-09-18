@@ -1,0 +1,11 @@
+import { createIcon } from '../create-icon'
+
+export const ClipboardClose = createIcon({
+  name: 'clipboard_close',
+  viewBox: '0 0 18 18',
+  children: (
+    <>
+      <path d="M10.4998 12.1204L7.52979 9.15039" strokeMiterlimit="10" /><path d="M10.47 9.17969L7.5 12.1497" strokeMiterlimit="10" /><path d="M7.5 4.5H10.5C12 4.5 12 3.75 12 3C12 1.5 11.25 1.5 10.5 1.5H7.5C6.75 1.5 6 1.5 6 3C6 4.5 6.75 4.5 7.5 4.5Z" strokeMiterlimit="10" /><path d="M12 3.01465C14.4975 3.14965 15.75 4.07215 15.75 7.49965V11.9996C15.75 14.9996 15 16.4996 11.25 16.4996H6.75C3 16.4996 2.25 14.9996 2.25 11.9996V7.49965C2.25 4.07965 3.5025 3.14965 6 3.01465" strokeMiterlimit="10" />
+    </>
+  ),
+})

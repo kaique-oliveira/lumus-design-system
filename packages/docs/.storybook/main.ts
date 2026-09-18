@@ -1,36 +1,16 @@
-import type { StorybookConfig } from "@storybook/react-vite";
+import type { StorybookConfig } from '@storybook/react-vite'
+import tailwindcss from '@tailwindcss/vite'
 
-import { join, dirname } from "path";
-
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
-function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, "package.json")));
-}
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: [
-    getAbsolutePath("@storybook/addon-onboarding"),
-    getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@chromatic-com/storybook"),
-    getAbsolutePath("@storybook/addon-interactions"),
-  ],
-  framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
-    options: {},
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(ts|tsx)'],
+  addons: ['@storybook/addon-docs', '@storybook/addon-a11y'],
+  framework: '@storybook/react-vite',
+  core: { disableTelemetry: true },
+  viteFinal: async (config, { configType }) => {
+    config.plugins = [...(config.plugins ?? []), tailwindcss()]
+    if (configType === 'PRODUCTION') config.base = '/lumus-design-system/'
+    return config
   },
-  viteFinal: (config, { configType }) => {
-    if (configType === "PRODUCTION") {
-      config.base = "/lumus-design-system/";
-    }
+}
 
-    return config;
-  },
-  docs: {
-    autodocs: "tag",
-  },
-};
-export default config;
+export default config
